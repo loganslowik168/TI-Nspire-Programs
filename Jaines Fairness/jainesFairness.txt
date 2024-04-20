@@ -1,0 +1,24 @@
+Define jainesfairness()=
+Prgm
+:Local i,n,temp,num,den
+:benefits:={}
+:jfv:=0
+:Request "Number of users",n
+:For i,1,n,1
+:  Request "Enter ratio",temp
+:  benefits[i]:=temp
+:EndFor
+:num:=0
+:For i,1,n,1
+:  num:=num+benefits[i]
+:EndFor
+:num:=num^(2)
+:den:=0
+:For i,1,n,1
+:  den:=den+benefits[i]^(2)
+:EndFor
+:den:=den*n
+:Disp "Jaines Fairness Value ="
+:jfv:=((num)/(den))
+:Disp jfv
+:EndPrgm
